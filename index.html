@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kill The Monster</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@2"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="panel scores">
+            <div class="score">
+                <h1>Player</h1>
+                <div class="life-bar">
+                    <div class="life" 
+                        :class="{danger: playerLife < 20 }"
+                        :style="{width: playerLife + '%'}"
+                        >
+                    </div>
+                </div>
+                <div>{{ playerLife }}%</div>
+            </div>
+            <div class="score">
+                <h1>Monster</h1>
+                <div class="life-bar">
+                    <div class="life"                        
+                    :class="{danger: monsterLife < 20 }"
+                    :style="{width: monsterLife + '%'}"
+                    >
+                    </div>
+                </div>
+                <div>{{ monsterLife }}%</div>
+            </div>
+        </div>
+        <div class="panel result">
+
+        </div>
+        <div class="panel buttons">
+
+        </div>
+        <div class="panel logs">
+
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

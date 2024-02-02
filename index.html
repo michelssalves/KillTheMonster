@@ -39,7 +39,13 @@
             <div v-else class="lose">You lose !!! =(</div>
         </div>
         <div class="panel buttons">
-
+            <template v-if="running">
+                <button class="btn attack">Attack</button>
+                <button class="btn special-attack">Special Attack</button>
+                <button class="btn heal">Heal</button>
+                <button class="btn quit">Quit</button>
+            </template>
+            <button v-else class="btn new-game">New Game</button>
         </div>
         <div class="panel logs">
 

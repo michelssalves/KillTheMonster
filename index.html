@@ -35,7 +35,7 @@
             </div>
         </div>
         <div v-if="hasResult" class="panel result">
-            <div v-if="monsterLife==0" class="win">You win !!! =)</div>
+            <div v-if="monsterLife == 0" class="win">You win !!! =)</div>
             <div v-else class="lose">You lose !!! =(</div>
         </div>
         <div class="panel buttons">
@@ -57,8 +57,12 @@
             @click="startGame()"    
             class="btn new-game">New Game</button>
         </div>
-        <div class="panel logs">
-
+        <div v-if="logs.length" class="panel logs">
+            <ul>
+                <li v-for="log in logs" :class="log.cls" class="log">
+                    {{log.text}}
+                </li>
+            </ul>
         </div>
     </div>
     <script src="app.js"></script>
